@@ -3,10 +3,10 @@ import { useState, useMemo, useEffect, useCallback } from "react";
 // ── Supabase config ───────────────────────────────────────────────────────────
 
 const SUPA_URL  = "https://pjrzcmhylemmwibnvsxo.supabase.co";
-const SUPA_KEY  = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBqcnpjbWh5bGVtbXdpYm52c3hvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE2MzYzODMsImV4cCI6MjA5NzIxMjM4M30.dAHY8CRSzit2tckI0eYobriGY-KgOMdik5r6lSwS3ts";
+const SUPA_KEY  = "sb_publishable_qSC1Nmg-AVY_pES73fKJxQ_BdqVKlHV";
 
 const db = {
-  headers: { "Content-Type": "application/json", "apikey": SUPA_KEY, "Authorization": `Bearer ${SUPA_KEY}` },
+headers: { "Content-Type": "application/json", "apikey": SUPA_KEY },
 
   async get(table, params = "") {
     const r = await fetch(`${SUPA_URL}/rest/v1/${table}${params}`, { headers: this.headers });
